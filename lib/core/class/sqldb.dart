@@ -1,5 +1,6 @@
-import 'package:sqflite/sqflite.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 class SqlDb {
   static Database? _db;
@@ -81,7 +82,7 @@ class SqlDb {
     return response;
   }
 
-// DELETE Database
+// DELETE DATABASE
   deleteDb() async {
     String databasePath = await getDatabasesPath();
     String path = join(databasePath, dbName);

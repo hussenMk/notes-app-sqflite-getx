@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notes_app_sqflite/sqldb.dart';
+import 'package:notes_app_sqflite/core/class/sqldb.dart';
 import '../core/constant/colors.dart';
 import '../core/constant/routes.dart';
 
 class HomeController extends GetxController {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   SqlDb sqlDb = SqlDb();
-
   List data = [];
 
   Future readData() async {
@@ -43,11 +42,21 @@ class HomeController extends GetxController {
   }
 
   goToEditNotes(int id, String title, content, dateTimeCreated) {
-    Get.toNamed(AppRoutes.editNotes, arguments: {
-      "id": id,
-      "title": title,
-      "content": content,
-      "dateTimeCreated": dateTimeCreated,
-    });
+    Get.toNamed(
+      AppRoutes.editNotes,
+      arguments: {
+        "id": id,
+        "title": title,
+        "content": content,
+        "dateTimeCreated": dateTimeCreated,
+      },
+    );
+  }
+
+  bool isSwitch = false;
+
+  void switchChange(bool val) {
+    isSwitch = val;
+    update();
   }
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../controller/edit_controller.dart';
 import '../../../../core/constant/colors.dart';
-import '../../widget/shared/custom_app_bar.dart';
+import '../widget/shared/custom_app_bar.dart';
 
 class EditNotes extends StatelessWidget {
   const EditNotes({super.key});

@@ -1,7 +1,8 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:notes_app_sqflite/view/screen/home/home.dart';
-import 'package:notes_app_sqflite/view/screen/notes/add.dart';
-import 'package:notes_app_sqflite/view/screen/notes/edit.dart';
+import 'package:notes_app_sqflite/view/screen/add.dart';
+import 'package:notes_app_sqflite/view/screen/edit.dart';
+import 'package:notes_app_sqflite/view/screen/home.dart';
+
 import 'core/constant/routes.dart';
 
 List<GetPage<dynamic>>? routes = [

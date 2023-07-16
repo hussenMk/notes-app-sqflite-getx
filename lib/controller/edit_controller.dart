@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:notes_app_sqflite/sqldb.dart';
+import 'package:notes_app_sqflite/core/class/sqldb.dart';
 import '../core/constant/colors.dart';
 import '../core/constant/routes.dart';
 import 'home_controller.dart';
 
 class EditNotesController extends GetxController {
   SqlDb sqlDb = SqlDb();
+  int? id;
+  List data = [];
   TextEditingController? title;
   TextEditingController? content;
   String dateTimeCreated =
       DateFormat("MMM dd, yyyy HH:mm:ss").format(DateTime.now());
 
-  int? id;
-  List data = [];
   Future updateData(int id) async {
     int response = await sqlDb.updateData(
       "notes",

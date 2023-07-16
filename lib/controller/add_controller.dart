@@ -4,11 +4,10 @@ import 'package:intl/intl.dart';
 import 'package:notes_app_sqflite/controller/home_controller.dart';
 import 'package:notes_app_sqflite/core/constant/colors.dart';
 import 'package:notes_app_sqflite/core/constant/routes.dart';
-import 'package:notes_app_sqflite/sqldb.dart';
+import 'package:notes_app_sqflite/core/class/sqldb.dart';
 
 class AddNotesController extends GetxController {
   SqlDb sqlDb = SqlDb();
-
   TextEditingController? title;
   TextEditingController? content;
   String dateTimeCreated =

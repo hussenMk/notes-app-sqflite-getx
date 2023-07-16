@@ -41,10 +41,12 @@ class SearchData extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    filterData = controller.data.where((element) {
-      return element['title'].contains(query) ||
-          element['content'].contains(query);
-    }).toList();
+    filterData = controller.data.where(
+      (element) {
+        return element['title'].contains(query) ||
+            element['content'].contains(query);
+      },
+    ).toList();
 
     return GetBuilder<HomeController>(
       builder: (controller) => StaggeredGridView.countBuilder(

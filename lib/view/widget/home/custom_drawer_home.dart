@@ -6,8 +6,6 @@ import 'package:url_launcher/url_launcher_string.dart';
 import '../../../controller/home_controller.dart';
 import '../../../core/constant/colors.dart';
 import '../../../core/constant/image_asset.dart';
-import '../../../core/constant/routes.dart';
-import '../../../core/constant/theme_data.dart';
 import 'custom_button_lang.dart';
 
 class CustomDrawerHome extends GetView<HomeController> {
@@ -52,7 +50,16 @@ class CustomDrawerHome extends GetView<HomeController> {
                       ImageAsset.theme,
                       height: 30,
                     ),
-                    trailing: const Icon(CupertinoIcons.moon_stars),
+                    // trailing: const Icon(CupertinoIcons.moon_stars),
+                    trailing: GetBuilder<HomeController>(
+                      builder: (controller) => Switch(
+                        onChanged: (val) {
+                          controller.switchChange(val);
+                          ThemeService().changeThemeMode();
+                        },
+                        value: controller.isSwitch,
+                      ),
+                    ),
                   ),
                 ),
                 const Divider(),

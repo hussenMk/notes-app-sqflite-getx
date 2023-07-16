@@ -14,7 +14,6 @@ class ImageAsset {
   static const String drawer = "$imageRoot/drawer.png";
 
   //*Lottie
-
   static const String rootLottie = "assets/lottie";
   // static const String loding = "$rootLottie/loading.json";
   // static const String offline = "$rootLottie/offline.json";
