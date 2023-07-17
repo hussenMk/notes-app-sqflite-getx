@@ -29,8 +29,11 @@ class AddNotesController extends GetxController {
 
     // }
     if (response > 0) {
-      Get.snackbar("تنبيه", "تم إضافة الملاحظة بنجاح",
-          colorText: AppColors.blue);
+      Get.snackbar(
+        "تنبيه",
+        "تم إضافة الملاحظة بنجاح",
+        colorText: AppColors.primaryColor,
+      );
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

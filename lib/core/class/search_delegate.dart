@@ -72,8 +72,8 @@ class SearchData extends SearchDelegate {
                     child: ListTile(
                       title: Text(
                         "${controller.data[index]['title']}",
-                        style: const TextStyle(
-                          color: AppColors.blue,
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -95,8 +95,8 @@ class SearchData extends SearchDelegate {
                     child: ListTile(
                       title: Text(
                         "${filterData[index]['title']}",
-                        style: const TextStyle(
-                          color: AppColors.blue,
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

@@ -31,7 +31,7 @@ class CustomCardNotes extends GetView<HomeController> {
               Get.defaultDialog(
                 cancelTextColor: AppColors.darkBlue,
                 confirmTextColor: AppColors.white,
-                buttonColor: AppColors.blue,
+                buttonColor: Theme.of(context).colorScheme.primary,
                 title: "تنبيه",
                 middleText: "هل أنت متأكد من حذف الملاحظة؟",
                 onConfirm: () {
@@ -42,7 +42,6 @@ class CustomCardNotes extends GetView<HomeController> {
               );
             },
             child: Card(
-              color: Theme.of(context).colorScheme.primary,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
               elevation: .1,
@@ -60,6 +59,9 @@ class CustomCardNotes extends GetView<HomeController> {
                     Text("${controller.data[index]['content']}", maxLines: 10),
                     Text(
                       "${controller.data[index]['dateTimeCreated']}",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onPrimary,
+                      ),
                     ),
                   ],
                 ),

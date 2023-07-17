@@ -15,12 +15,17 @@ class EditNotes extends StatelessWidget {
         onPressed: () {
           controller.updateData(controller.id!);
         },
-        backgroundColor: AppColors.blue,
         label: const Text(
           "حفظ",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppColors.white,
+          ),
         ),
-        icon: const Icon(Icons.save),
+        icon: const Icon(
+          Icons.save,
+          color: AppColors.white,
+        ),
       ),
       body: GetBuilder<EditNotesController>(
         builder: (controller) => Container(
@@ -34,7 +39,7 @@ class EditNotes extends StatelessWidget {
                   Get.defaultDialog(
                     cancelTextColor: AppColors.darkBlue,
                     confirmTextColor: AppColors.white,
-                    buttonColor: AppColors.blue,
+                    buttonColor: Theme.of(context).colorScheme.primary,
                     title: "تنبيه",
                     middleText: "هل أنت متأكد من حذف الملاحظة؟",
                     onConfirm: () {
@@ -62,7 +67,8 @@ class EditNotes extends StatelessWidget {
                       //! Share.share("${controller.title.obs} \n${controller.content}");
                     },
                     icon: const Icon(Icons.share),
-                    color: Theme.of(context).colorScheme.secondary,
+                    // color: Theme.of(context).colorScheme.secondary,
+                    color: AppColors.blue2,
                   ),
                 ),
               ),
@@ -73,71 +79,34 @@ class EditNotes extends StatelessWidget {
                     hintText: 'العنوان',
                     hintStyle: TextStyle(
                       fontSize: 22,
-                      color: Theme.of(context).colorScheme.secondary,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                     border: InputBorder.none),
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 25.0,
-                  color: AppColors.blue,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
                 ),
-                cursorColor: AppColors.blue,
-                // validator: (val) => validInput(val!, 1, 20, ""),
-              ),
-              Table(
-                children: [
-                  const TableRow(
-                    children: [
-                      Text(
-                        "عدد الحروف",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.blue2),
-                      ),
-                      Text(
-                        "عدد الكلمات",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.blue2),
-                      ),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      Text(
-                        "${controller.content!.text.length}",
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.darkBlue),
-                      ),
-                      Text(
-                        "${controller.title!.text.length}",
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.darkBlue),
-                      ),
-                    ],
-                  ),
-                ],
+                cursorColor: Theme.of(context).colorScheme.secondary,
               ),
               const Divider(indent: 20, endIndent: 20),
               TextFormField(
-                style: const TextStyle(color: AppColors.blue),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
                 controller: controller.content,
                 maxLines: null,
+                maxLength: 500,
                 decoration: InputDecoration(
                   hintText: 'ابدأ في الكتابة',
                   hintStyle: TextStyle(
                     fontSize: 15,
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: Theme.of(context).colorScheme.onPrimary,
                   ),
                   border: InputBorder.none,
                 ),
-                cursorColor: AppColors.blue,
+                cursorColor: Theme.of(context).colorScheme.secondary,
+
                 // validator: (val) => validInput(val!, 3, 200, ""),
               ),
               const SizedBox(height: 20),

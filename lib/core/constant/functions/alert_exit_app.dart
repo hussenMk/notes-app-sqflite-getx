@@ -9,7 +9,7 @@ Future<bool> alertExitApp() {
     middleText: "هل تريد الخروج من التطبيق ؟",
     actions: [
       MaterialButton(
-          color: AppColors.blue,
+          color: AppColors.primaryColor,
           textColor: AppColors.white,
           onPressed: () {
             exit(0);

@@ -27,8 +27,11 @@ class EditNotesController extends GetxController {
     );
 
     if (response > 0) {
-      Get.snackbar("تنبيه", "تم تعديل الملاحظة بنجاح",
-          colorText: AppColors.blue);
+      Get.snackbar(
+        "تنبيه",
+        "تم تعديل الملاحظة بنجاح",
+        colorText: AppColors.primaryColor,
+      );
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();
@@ -46,7 +49,8 @@ class EditNotesController extends GetxController {
     if (response > 0) {
       data.removeWhere((element) => element['id'] == id);
       update();
-      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح", colorText: AppColors.blue);
+      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
+          colorText: AppColors.primaryColor);
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

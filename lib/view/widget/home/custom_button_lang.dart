@@ -15,7 +15,7 @@ class CustomButtonLang extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 50),
       width: double.infinity,
       child: MaterialButton(
-        color: AppColors.blue,
+        color: Theme.of(context).colorScheme.primary,
         textColor: Colors.white,
         onPressed: onPressed,
         child: Text(

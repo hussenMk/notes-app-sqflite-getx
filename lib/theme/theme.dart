@@ -7,21 +7,27 @@ class ThemeService {
   static ThemeData ligtTheme = ThemeData(
     brightness: Brightness.light,
     fontFamily: "Cairo",
+    cardColor: AppColors.lightGrey,
     colorScheme: const ColorScheme.light(
       primary: AppColors.lightGrey,
       secondary: AppColors.spaceGrey,
+      tertiary: AppColors.primaryColor,
+      onPrimary: Color.fromARGB(159, 0, 0, 0),
     ),
-    floatingActionButtonTheme:
-        const FloatingActionButtonThemeData(backgroundColor: AppColors.blue),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: AppColors.spaceGrey,
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     fontFamily: "Cairo",
     colorScheme: ColorScheme.dark(
-      background: Color(0xff303030),
-      primary: Color(0xff424242).withOpacity(.9),
+      background: const Color(0xff303030),
+      primary: const Color(0xff424242).withOpacity(.9),
       secondary: AppColors.lightGrey,
+      tertiary: AppColors.lightGrey,
+      onPrimary: const Color.fromARGB(255, 151, 151, 151).withOpacity(.9),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.lightGrey),

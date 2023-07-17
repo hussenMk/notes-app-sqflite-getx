@@ -22,8 +22,11 @@ class HomeController extends GetxController {
     if (response > 0) {
       data.remove((element) => element);
       update();
-      Get.snackbar("تنبيه", "تم حذف جميع الملاحظات بنجاح",
-          colorText: AppColors.blue);
+      Get.snackbar(
+        "تنبيه",
+        "تم حذف جميع الملاحظات بنجاح",
+        colorText: AppColors.primaryColor,
+      );
       HomeController c = Get.put(HomeController());
       c.readData();
 
@@ -59,7 +62,8 @@ class HomeController extends GetxController {
     if (response > 0) {
       data.removeWhere((element) => element['id'] == id);
       update();
-      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح", colorText: AppColors.blue);
+      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
+          colorText: AppColors.primaryColor);
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

@@ -5,6 +5,7 @@ import 'package:notes_app_sqflite/theme/theme.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../../controller/home_controller.dart';
 import '../../../core/constant/colors.dart';
+import '../../../core/constant/functions/alert_exit_app.dart';
 import '../../../core/constant/image_asset.dart';
 import 'custom_button_lang.dart';
 
@@ -19,17 +20,17 @@ class CustomDrawerHome extends GetView<HomeController> {
       children: [
         UserAccountsDrawerHeader(
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
+            color: const Color(0xff424242).withOpacity(.9),
           ),
           currentAccountPicture: Image.asset(
             ImageAsset.logo,
           ),
           accountName: const Text(
-            "Notes App",
+            "",
             style: TextStyle(color: AppColors.spaceGrey),
           ),
           accountEmail: const Text(
-            "......",
+            "",
             style: TextStyle(color: AppColors.spaceGrey),
           ),
         ),
@@ -105,17 +106,6 @@ class CustomDrawerHome extends GetView<HomeController> {
                 const Divider(),
                 ListTile(
                   onTap: () {
-                    // Get.toNamed(AppRoutes.accountInfo);
-                  },
-                  title: const Text("معلومات الحساب"),
-                  leading: Image.asset(
-                    ImageAsset.account,
-                    height: 25,
-                  ),
-                ),
-                const Divider(),
-                ListTile(
-                  onTap: () {
                     launchUrlString("http://wa.me/00967778383844");
                   },
                   title: const Text("المساعدة والدعم"),
@@ -169,11 +159,9 @@ class CustomDrawerHome extends GetView<HomeController> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             child: ListTile(
-              onTap: () {
-                // controller.logout();
-              },
+              onTap: () {},
               title: const Text(
-                "تسجيل الخروج",
+                "الخروج من التطبيق",
                 style: TextStyle(color: AppColors.red),
               ),
               leading: Image.asset(

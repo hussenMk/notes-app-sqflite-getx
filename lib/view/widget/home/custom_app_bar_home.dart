@@ -32,7 +32,7 @@ class CustomAppBarHome extends GetView<HomeController> {
                   onPressed: onPressedDrawer,
                   icon: Image.asset(
                     ImageAsset.drawer,
-                    color: AppColors.blue,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
               ),
@@ -44,9 +44,9 @@ class CustomAppBarHome extends GetView<HomeController> {
                 ),
                 child: IconButton(
                   onPressed: onPressedSearch,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.search,
-                    color: AppColors.blue,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
               ),
@@ -59,13 +59,13 @@ class CustomAppBarHome extends GetView<HomeController> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: PopupMenuButton(
-              color: AppColors.blueDark.withOpacity(.8),
+              color: Theme.of(context).colorScheme.onSecondary,
               onSelected: (val) {
                 if (val == 1) {
                   Get.defaultDialog(
-                    cancelTextColor: AppColors.darkBlue,
-                    confirmTextColor: AppColors.white,
-                    buttonColor: AppColors.blue,
+                    cancelTextColor: Theme.of(context).colorScheme.secondary,
+                    confirmTextColor: Theme.of(context).colorScheme.primary,
+                    buttonColor: Theme.of(context).colorScheme.secondary,
                     title: "تنبيه",
                     middleText: "هل أنت متأكد من حذف جميع الملاحظات ؟",
                     onConfirm: () {

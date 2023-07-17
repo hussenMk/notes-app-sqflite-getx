@@ -13,12 +13,17 @@ class AddNotes extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => controller.insertData(),
-        backgroundColor: AppColors.blue,
         label: const Text(
           "حفظ",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppColors.white,
+          ),
         ),
-        icon: const Icon(Icons.save),
+        icon: const Icon(
+          Icons.save,
+          color: AppColors.white,
+        ),
       ),
       body: GetBuilder<AddNotesController>(
         builder: (controller) => Container(
@@ -42,44 +47,38 @@ class AddNotes extends StatelessWidget {
               ),
               TextFormField(
                 controller: controller.title,
-                // maxLength: 100,
                 decoration: InputDecoration(
                   hintText: 'العنوان',
                   hintStyle: TextStyle(
-                      fontSize: 22, color: AppColors.blue.withOpacity(0.6)),
+                    fontSize: 22,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
                   border: InputBorder.none,
                 ),
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 25.0,
-                  color: AppColors.blue,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
                 ),
-
-                cursorColor: AppColors.blue,
-                validator: (val) => validInput(val!, 1, 20, ""),
+                cursorColor: Theme.of(context).colorScheme.secondary,
               ),
-              // !Text(
-              //   controller.dateTimeCreated,
-              //   style: const TextStyle(
-              //     color: AppColors.blue2,
-              //     fontWeight: FontWeight.bold,
-              //   ),
-              // ),
               const Divider(indent: 20, endIndent: 20),
               TextFormField(
-                style: const TextStyle(color: AppColors.blue),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
                 controller: controller.content,
                 maxLines: null,
+                maxLength: 500,
                 decoration: InputDecoration(
                   hintText: 'ابدأ في الكتابة',
                   hintStyle: TextStyle(
                     fontSize: 15,
-                    color: AppColors.blue.withOpacity(0.8),
+                    color: Theme.of(context).colorScheme.onPrimary,
                   ),
                   border: InputBorder.none,
                 ),
-                cursorColor: AppColors.blue,
-                validator: (val) => validInput(val!, 3, 300, ""),
+                cursorColor: Theme.of(context).colorScheme.secondary,
               ),
             ],
           ),
