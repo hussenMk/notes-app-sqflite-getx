@@ -18,8 +18,8 @@ class CustomDrawerHome extends GetView<HomeController> {
     return Column(
       children: [
         UserAccountsDrawerHeader(
-          decoration: const BoxDecoration(
-            color: AppColors.lightGrey,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primary,
           ),
           currentAccountPicture: Image.asset(
             ImageAsset.logo,
@@ -36,6 +36,7 @@ class CustomDrawerHome extends GetView<HomeController> {
         Container(
           padding: const EdgeInsets.all(5),
           child: Card(
+            //! color: Theme.of(context).colorScheme.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),

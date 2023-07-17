@@ -84,13 +84,46 @@ class EditNotes extends StatelessWidget {
                 cursorColor: AppColors.blue,
                 // validator: (val) => validInput(val!, 1, 20, ""),
               ),
-              //! Text(
-              //   controller.dateTimeCreated,
-              //   style: const TextStyle(
-              //     color: AppColors.blue2,
-              //     fontWeight: FontWeight.bold,
-              //   ),
-              // ),
+              Table(
+                children: [
+                  const TableRow(
+                    children: [
+                      Text(
+                        "عدد الحروف",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.blue2),
+                      ),
+                      Text(
+                        "عدد الكلمات",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.blue2),
+                      ),
+                    ],
+                  ),
+                  TableRow(
+                    children: [
+                      Text(
+                        "${controller.content!.text.length}",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.darkBlue),
+                      ),
+                      Text(
+                        "${controller.title!.text.length}",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.darkBlue),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               const Divider(indent: 20, endIndent: 20),
               TextFormField(
                 style: const TextStyle(color: AppColors.blue),

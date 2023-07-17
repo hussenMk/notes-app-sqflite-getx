@@ -61,7 +61,7 @@ class CustomAppBarHome extends GetView<HomeController> {
             child: PopupMenuButton(
               color: AppColors.blueDark.withOpacity(.8),
               onSelected: (val) {
-                if (val == 0) {
+                if (val == 1) {
                   Get.defaultDialog(
                     cancelTextColor: AppColors.darkBlue,
                     confirmTextColor: AppColors.white,
@@ -79,7 +79,7 @@ class CustomAppBarHome extends GetView<HomeController> {
               },
               itemBuilder: (context) => [
                 const PopupMenuItem(
-                  value: 0,
+                  value: 1,
                   child: Text(
                     "حذف جميع الملاحظات",
                     style: TextStyle(

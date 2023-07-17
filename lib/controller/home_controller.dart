@@ -53,6 +53,23 @@ class HomeController extends GetxController {
     );
   }
 
+  Future deleteData(int id) async {
+    int response = await sqlDb.deleteData("notes", "id = $id");
+
+    if (response > 0) {
+      data.removeWhere((element) => element['id'] == id);
+      update();
+      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح", colorText: AppColors.blue);
+      Get.offNamed(AppRoutes.home);
+      HomeController c = Get.put(HomeController());
+      c.readData();
+    } else {
+      Get.snackbar("تنبيه", "حصل خطأ");
+    }
+    update();
+    return data;
+  }
+
   bool isSwitch = false;
 
   void switchChange(bool val) {

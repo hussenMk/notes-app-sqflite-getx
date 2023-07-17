@@ -8,6 +8,12 @@ class AppColors {
 
   //! static const Color blue = Color.fromARGB(255, 83, 120, 184);
 
+//*
+  static const Color primaryColor = Color(0xff0353a9);
+  static const Color secondaryColor = Color(0xff0353a9);
+  static const Color tertiaryColor = Color(0xff0353a9);
+//*
+
   static const Color blue3 = Color(0xff0353a9);
   static const Color blue = Color(0xffff5763);
 

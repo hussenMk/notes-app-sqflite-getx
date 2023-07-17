@@ -22,10 +22,25 @@ class CustomCardNotes extends GetView<HomeController> {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () => controller.goToEditNotes(
-                controller.data[index]['id'],
-                controller.data[index]['title'],
-                controller.data[index]['content'],
-                controller.data[index]['dateTimeCreated']),
+              controller.data[index]['id'],
+              controller.data[index]['title'],
+              controller.data[index]['content'],
+              controller.data[index]['dateTimeCreated'],
+            ),
+            onLongPress: () {
+              Get.defaultDialog(
+                cancelTextColor: AppColors.darkBlue,
+                confirmTextColor: AppColors.white,
+                buttonColor: AppColors.blue,
+                title: "تنبيه",
+                middleText: "هل أنت متأكد من حذف الملاحظة؟",
+                onConfirm: () {
+                  Get.back();
+                  controller.deleteData(controller.data[index]['id']);
+                },
+                onCancel: () {},
+              );
+            },
             child: Card(
               color: Theme.of(context).colorScheme.primary,
               shape: RoundedRectangleBorder(

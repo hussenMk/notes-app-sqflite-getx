@@ -22,6 +22,7 @@ class AddNotesController extends GetxController {
         "dateTimeCreated": dateTimeCreated,
       },
     );
+
     //! var defaultTitle = title!.text;
     // if (defaultTitle.isEmpty) {
     //   defaultTitle = "بدون عنوان";
