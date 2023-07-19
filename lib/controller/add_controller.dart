@@ -11,7 +11,7 @@ class AddNotesController extends GetxController {
   TextEditingController? title;
   TextEditingController? content;
   String dateTimeCreated =
-      DateFormat("MMM dd, yyyy HH:mm:ss").format(DateTime.now());
+      DateFormat("MMM dd, yyyy HH:mm").format(DateTime.now());
 
   Future insertData() async {
     int response = await sqlDb.insertData(
@@ -23,17 +23,13 @@ class AddNotesController extends GetxController {
       },
     );
 
-    //! var defaultTitle = title!.text;
-    // if (defaultTitle.isEmpty) {
-    //   defaultTitle = "بدون عنوان";
-
-    // }
     if (response > 0) {
       Get.snackbar(
         "تنبيه",
         "تم إضافة الملاحظة بنجاح",
-        colorText: AppColors.primaryColor,
+        colorText: AppColors.spaceGrey,
       );
+
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

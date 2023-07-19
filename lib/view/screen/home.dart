@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
         },
         // backgroundColor: AppColors.blue,
         label: Text(
-          "إضافة ملاحظة",
+          '2'.tr,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Theme.of(context).colorScheme.primary,

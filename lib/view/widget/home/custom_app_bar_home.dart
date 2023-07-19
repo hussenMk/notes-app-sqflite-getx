@@ -78,13 +78,13 @@ class CustomAppBarHome extends GetView<HomeController> {
                 }
               },
               itemBuilder: (context) => [
-                const PopupMenuItem(
+                PopupMenuItem(
                   value: 1,
                   child: Text(
-                    "حذف جميع الملاحظات",
+                    '13'.tr,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: AppColors.white,
+                      color: Theme.of(context).colorScheme.primary,
                       fontSize: 13,
                     ),
                   ),

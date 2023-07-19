@@ -13,9 +13,9 @@ class AddNotes extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => controller.insertData(),
-        label: const Text(
-          "حفظ",
-          style: TextStyle(
+        label: Text(
+          '3'.tr,
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: AppColors.white,
           ),
@@ -48,7 +48,7 @@ class AddNotes extends StatelessWidget {
               TextFormField(
                 controller: controller.title,
                 decoration: InputDecoration(
-                  hintText: 'العنوان',
+                  hintText: '4'.tr,
                   hintStyle: TextStyle(
                     fontSize: 22,
                     color: Theme.of(context).colorScheme.onPrimary,
@@ -71,7 +71,7 @@ class AddNotes extends StatelessWidget {
                 maxLines: null,
                 maxLength: 500,
                 decoration: InputDecoration(
-                  hintText: 'ابدأ في الكتابة',
+                  hintText: '5'.tr,
                   hintStyle: TextStyle(
                     fontSize: 15,
                     color: Theme.of(context).colorScheme.onPrimary,

@@ -8,11 +8,12 @@ class ThemeService {
     brightness: Brightness.light,
     fontFamily: "Cairo",
     cardColor: AppColors.lightGrey,
-    colorScheme: const ColorScheme.light(
+    colorScheme: ColorScheme.light(
       primary: AppColors.lightGrey,
       secondary: AppColors.spaceGrey,
       tertiary: AppColors.primaryColor,
-      onPrimary: Color.fromARGB(159, 0, 0, 0),
+      onPrimary: const Color.fromARGB(159, 0, 0, 0),
+      onSecondary: AppColors.spaceGrey.withOpacity(.6),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColors.spaceGrey,
@@ -28,6 +29,7 @@ class ThemeService {
       secondary: AppColors.lightGrey,
       tertiary: AppColors.lightGrey,
       onPrimary: const Color.fromARGB(255, 151, 151, 151).withOpacity(.9),
+      onSecondary: AppColors.lightGrey3,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.lightGrey),
@@ -52,4 +54,12 @@ class ThemeService {
     Get.changeThemeMode(isSaveDarkMode() ? ThemeMode.light : ThemeMode.dark);
     saveThemeData(!isSaveDarkMode());
   }
+
+  static ThemeData themeArabic = ThemeData(
+    fontFamily: "Cairo",
+  );
+
+  static ThemeData themeEnglish = ThemeData(
+    fontFamily: "Roboto",
+  );
 }

@@ -13,7 +13,7 @@ class EditNotesController extends GetxController {
   TextEditingController? title;
   TextEditingController? content;
   String dateTimeCreated =
-      DateFormat("MMM dd, yyyy HH:mm:ss").format(DateTime.now());
+      DateFormat("MMM dd, yyyy HH:mm").format(DateTime.now());
 
   Future updateData(int id) async {
     int response = await sqlDb.updateData(
@@ -30,7 +30,7 @@ class EditNotesController extends GetxController {
       Get.snackbar(
         "تنبيه",
         "تم تعديل الملاحظة بنجاح",
-        colorText: AppColors.primaryColor,
+        colorText: AppColors.spaceGrey,
       );
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
@@ -50,7 +50,7 @@ class EditNotesController extends GetxController {
       data.removeWhere((element) => element['id'] == id);
       update();
       Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
-          colorText: AppColors.primaryColor);
+          colorText: AppColors.spaceGrey);
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

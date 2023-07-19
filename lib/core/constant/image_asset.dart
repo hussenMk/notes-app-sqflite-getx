@@ -1,8 +1,6 @@
 class ImageAsset {
   static const String imageRoot = "assets/images";
   static const String logo = "$imageRoot/logo.png";
-  static const String logo1 = "$imageRoot/logo1.png";
-  static const String background = "$imageRoot/bachground.png";
   static const String remove = "$imageRoot/remove.png";
   static const String about = "$imageRoot/about.png";
   static const String account = "$imageRoot/account.png";

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/controller/home_controller.dart';
-import 'package:notes_app_sqflite/core/constant/colors.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
@@ -66,19 +65,33 @@ class SearchData extends SearchDelegate {
                       controller.data[index]['content'],
                       controller.data[index]['dateTimeCreated']),
                   child: Card(
+                    margin: const EdgeInsets.only(top: 15, left: 8, right: 8),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
-                    elevation: .1,
+                    elevation: .0,
                     child: ListTile(
                       title: Text(
                         "${controller.data[index]['title']}",
                         style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      subtitle: Text("${controller.data[index]['content']}",
-                          maxLines: 10),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "${controller.data[index]['content']}",
+                            maxLines: 10,
+                          ),
+                          Text(
+                            "${controller.data[index]['dateTimeCreated']}",
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )
@@ -89,19 +102,33 @@ class SearchData extends SearchDelegate {
                       controller.data[index]['content'],
                       controller.data[index]['dateTimeCreated']),
                   child: Card(
+                    margin: const EdgeInsets.only(top: 15, left: 8, right: 8),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
-                    elevation: .1,
+                    elevation: .0,
                     child: ListTile(
                       title: Text(
                         "${filterData[index]['title']}",
                         style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.secondary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      subtitle:
-                          Text("${filterData[index]['content']}", maxLines: 10),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "${controller.data[index]['content']}",
+                            maxLines: 10,
+                          ),
+                          Text(
+                            "${controller.data[index]['dateTimeCreated']}",
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

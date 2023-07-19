@@ -8,11 +8,13 @@ class HomeController extends GetxController {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   SqlDb sqlDb = SqlDb();
   List data = [];
+  bool isSwitch = false;
 
   Future readData() async {
     List<Map> response = await sqlDb.readData("notes");
     data.clear();
     data.addAll(response);
+
     update();
   }
 
@@ -25,7 +27,7 @@ class HomeController extends GetxController {
       Get.snackbar(
         "تنبيه",
         "تم حذف جميع الملاحظات بنجاح",
-        colorText: AppColors.primaryColor,
+        colorText: AppColors.spaceGrey,
       );
       HomeController c = Get.put(HomeController());
       c.readData();
@@ -41,6 +43,7 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     readData();
+
     super.onInit();
   }
 
@@ -63,7 +66,7 @@ class HomeController extends GetxController {
       data.removeWhere((element) => element['id'] == id);
       update();
       Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
-          colorText: AppColors.primaryColor);
+          colorText: AppColors.spaceGrey);
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();
@@ -73,8 +76,6 @@ class HomeController extends GetxController {
     update();
     return data;
   }
-
-  bool isSwitch = false;
 
   void switchChange(bool val) {
     isSwitch = val;

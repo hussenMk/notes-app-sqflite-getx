@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../controller/edit_controller.dart';
 import '../../../../core/constant/colors.dart';
+import '../../core/constant/functions/custom_alert_dialog.dart';
 import '../widget/shared/custom_app_bar.dart';
 
 class EditNotes extends StatelessWidget {
@@ -15,9 +16,9 @@ class EditNotes extends StatelessWidget {
         onPressed: () {
           controller.updateData(controller.id!);
         },
-        label: const Text(
-          "حفظ",
-          style: TextStyle(
+        label: Text(
+          '3'.tr,
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: AppColors.white,
           ),
@@ -36,17 +37,12 @@ class EditNotes extends StatelessWidget {
               CustomAppBar(
                 onPressedRight: () => Get.back(),
                 onPressedLeft: () {
-                  Get.defaultDialog(
-                    cancelTextColor: AppColors.darkBlue,
-                    confirmTextColor: AppColors.white,
-                    buttonColor: Theme.of(context).colorScheme.primary,
-                    title: "تنبيه",
-                    middleText: "هل أنت متأكد من حذف الملاحظة؟",
-                    onConfirm: () {
+                  customAlertDialog(
+                    () {
                       Get.back();
                       controller.deleteData(controller.id!);
                     },
-                    onCancel: () {},
+                    () {},
                   );
                 },
                 iconLeft: const Icon(
@@ -76,14 +72,14 @@ class EditNotes extends StatelessWidget {
                 controller: controller.title,
                 // maxLength: 100,
                 decoration: InputDecoration(
-                    hintText: 'العنوان',
+                    hintText: '4'.tr,
                     hintStyle: TextStyle(
                       fontSize: 22,
                       color: Theme.of(context).colorScheme.onPrimary,
                     ),
                     border: InputBorder.none),
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 23.0,
                   color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
                 ),
@@ -98,7 +94,7 @@ class EditNotes extends StatelessWidget {
                 maxLines: null,
                 maxLength: 500,
                 decoration: InputDecoration(
-                  hintText: 'ابدأ في الكتابة',
+                  hintText: '5'.tr,
                   hintStyle: TextStyle(
                     fontSize: 15,
                     color: Theme.of(context).colorScheme.onPrimary,

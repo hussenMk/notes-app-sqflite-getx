@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:notes_app_sqflite/core/localization/translation.dart';
 import 'package:notes_app_sqflite/routes.dart';
 import 'package:notes_app_sqflite/theme/theme.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       locale: Get.deviceLocale,
       debugShowCheckedModeBanner: false,
+      translations: MyTranslation(),
       theme: ThemeService.ligtTheme,
       darkTheme: ThemeService.darkTheme,
       themeMode: ThemeService().getThemeMode(),

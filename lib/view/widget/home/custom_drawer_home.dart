@@ -1,12 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:notes_app_sqflite/core/constant/functions/alert_exit_app.dart';
 import 'package:notes_app_sqflite/theme/theme.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../../controller/home_controller.dart';
 import '../../../core/constant/colors.dart';
-import '../../../core/constant/functions/alert_exit_app.dart';
 import '../../../core/constant/image_asset.dart';
+import '../../../core/localization/local_controller.dart';
 import 'custom_button_lang.dart';
 
 class CustomDrawerHome extends GetView<HomeController> {
@@ -14,13 +14,13 @@ class CustomDrawerHome extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    // LocaleController localeController = Get.put(LocaleController());
+    LocaleController localeController = Get.put(LocaleController());
 
     return Column(
       children: [
         UserAccountsDrawerHeader(
           decoration: BoxDecoration(
-            color: const Color(0xff424242).withOpacity(.9),
+            color: const Color(0xff424242).withOpacity(.6),
           ),
           currentAccountPicture: Image.asset(
             ImageAsset.logo,
@@ -37,7 +37,6 @@ class CustomDrawerHome extends GetView<HomeController> {
         Container(
           padding: const EdgeInsets.all(5),
           child: Card(
-            //! color: Theme.of(context).colorScheme.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
@@ -47,7 +46,7 @@ class CustomDrawerHome extends GetView<HomeController> {
                 InkWell(
                   onTap: () => ThemeService().changeThemeMode(),
                   child: ListTile(
-                    title: const Text('الوضع الداكن'),
+                    title: Text('6'.tr),
                     leading: Image.asset(
                       ImageAsset.theme,
                       height: 30,
@@ -79,17 +78,17 @@ class CustomDrawerHome extends GetView<HomeController> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CustomButtonLang(
-                            txtButton: "اللغة العربية",
+                            txtButton: '11'.tr,
                             onPressed: () {
-                              // controller.changeLang("ar");
+                              localeController.changeLang("ar");
 
                               Get.back();
                             },
                           ),
                           CustomButtonLang(
-                            txtButton: "اللغة الإنجليزية",
+                            txtButton: '12'.tr,
                             onPressed: () {
-                              // controller.changeLang("en");
+                              localeController.changeLang("en");
                               Get.back();
                             },
                           ),
@@ -97,7 +96,7 @@ class CustomDrawerHome extends GetView<HomeController> {
                       ),
                     ));
                   },
-                  title: const Text("تغيير اللغة"),
+                  title: Text('7'.tr),
                   leading: Image.asset(
                     ImageAsset.language,
                     height: 30,
@@ -108,7 +107,7 @@ class CustomDrawerHome extends GetView<HomeController> {
                   onTap: () {
                     launchUrlString("http://wa.me/00967778383844");
                   },
-                  title: const Text("المساعدة والدعم"),
+                  title: Text('8'.tr),
                   leading: Image.asset(
                     ImageAsset.help,
                     height: 30,
@@ -141,7 +140,7 @@ class CustomDrawerHome extends GetView<HomeController> {
                       ),
                     ));
                   },
-                  title: const Text("عن التطبيق"),
+                  title: Text('9'.tr),
                   leading: Image.asset(
                     ImageAsset.about,
                     height: 25,
@@ -159,10 +158,12 @@ class CustomDrawerHome extends GetView<HomeController> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             child: ListTile(
-              onTap: () {},
-              title: const Text(
-                "الخروج من التطبيق",
-                style: TextStyle(color: AppColors.red),
+              onTap: () {
+                alertExitApp();
+              },
+              title: Text(
+                '10'.tr,
+                style: const TextStyle(color: AppColors.red),
               ),
               leading: Image.asset(
                 ImageAsset.logout,

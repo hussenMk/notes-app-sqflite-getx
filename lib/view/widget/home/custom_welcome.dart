@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:notes_app_sqflite/core/constant/colors.dart';
 import '../../../core/constant/image_asset.dart';
 
 class CustomWelcomeScreen extends StatelessWidget {
@@ -13,16 +13,16 @@ class CustomWelcomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset(ImageAsset.welcome3),
+          Lottie.asset(ImageAsset.welcome2),
           const SizedBox(
             height: 50,
           ),
-          const Text(
-            "لا يوجد لديك ملاحظات !",
+          Text(
+            '1'.tr,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: AppColors.blueDark,
+              color: Theme.of(context).colorScheme.secondary,
             ),
           ),
         ],
