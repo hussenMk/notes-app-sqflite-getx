@@ -28,28 +28,20 @@ Notes app is open-source for Android & ios. It is build with Dart Language and G
 ### Light Mode
 | Welcom Screen | Home Screen | Drawer |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6b22ad30-32b3-4fc6-ba43-5726f6c405ac" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/5dd221bf-948f-4fe6-8484-607123cb4445" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/4737ef1b-116d-46e3-b5b3-51d6a99cc71c" width="400">|
+|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6b22ad30-32b3-4fc6-ba43-5726f6c405ac" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/05a6585e-754c-436f-98aa-da0b77394fdc" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/269468e3-b1c5-4d31-bb30-28b658760c3a" width="400">|
 
-| Add Notes | Edit Notes| Delete Dialog |
+| Add Notes | Edit Notes| Search Bar |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6b22ad30-32b3-4fc6-ba43-5726f6c405ac" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/827713a4-dc77-4543-b157-496732c5d9ef" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/52bb7cc8-e569-4151-a5c7-6c8266a518eb" width="400">|
-
-| Search Bar
-|------
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/2564756f-a6a9-4429-b20f-af6b2fafbdc4" width="400">
+|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/eae57d50-7652-4ef2-9550-5d9cc8b1be9b" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/827713a4-dc77-4543-b157-496732c5d9ef" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/7707dbf4-7144-4fd8-b4aa-dc3eab4feb4e" width="400">|
 
 ### Dark Mode
 | Welcom Screen | Home Screen | Drawer |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6b22ad30-32b3-4fc6-ba43-5726f6c405ac" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/5dd221bf-948f-4fe6-8484-607123cb4445" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/4737ef1b-116d-46e3-b5b3-51d6a99cc71c" width="400">|
+|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/8c897625-1b8a-4b3c-82f1-54f3f611cddf" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6cc24b27-561d-4b16-b677-53d9781dc5c6" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/50d0b206-d4b9-4627-a1d4-ac2796556a47" width="400">|
 
-| Add Notes | Edit Notes| Delete Dialog |
+| Add Notes | Edit Notes| Search Bar |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/6b22ad30-32b3-4fc6-ba43-5726f6c405ac" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/827713a4-dc77-4543-b157-496732c5d9ef" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/52bb7cc8-e569-4151-a5c7-6c8266a518eb" width="400">|
-
-| Search Bar
-|------
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/2564756f-a6a9-4429-b20f-af6b2fafbdc4" width="400">
+|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/4233a473-4bd3-4e4d-9926-ee001fdfeffe" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/3f0a063a-36b5-4853-93e2-2877a845ba4a" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/77d6f2a4-5de4-403a-ac51-13897019d7a0" width="400">|
 
 
 
