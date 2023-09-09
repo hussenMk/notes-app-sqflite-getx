@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../controller/add_controller.dart';
 import '../../../../core/constant/colors.dart';
-import '../../../../core/constant/functions/valid_input.dart';
 
 class AddNotes extends StatelessWidget {
   const AddNotes({super.key});
