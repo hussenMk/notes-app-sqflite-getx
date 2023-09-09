@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/core/class/sqldb.dart';
-import '../core/constant/colors.dart';
 import '../core/constant/routes.dart';
 
 class HomeController extends GetxController {
@@ -9,6 +8,12 @@ class HomeController extends GetxController {
   SqlDb sqlDb = SqlDb();
   List data = [];
   bool isSwitch = false;
+  bool isCheckbox = false;
+
+  void switchChange(bool val) {
+    isSwitch = val;
+    update();
+  }
 
   Future readData() async {
     List<Map> response = await sqlDb.readData("notes");
@@ -24,18 +29,12 @@ class HomeController extends GetxController {
     if (response > 0) {
       data.remove((element) => element);
       update();
-      Get.snackbar(
-        "تنبيه",
-        "تم حذف جميع الملاحظات بنجاح",
-        colorText: AppColors.spaceGrey,
-      );
+
       HomeController c = Get.put(HomeController());
       c.readData();
 
-      print("$reactive ==========DELETE ALL DATA========");
-    } else {
-      Get.snackbar("تنبيه", "حصل خطأ");
-    }
+      print("$reactive ========== DELETE ALL DATA========");
+    } else {}
     update();
     return data;
   }
@@ -65,8 +64,7 @@ class HomeController extends GetxController {
     if (response > 0) {
       data.removeWhere((element) => element['id'] == id);
       update();
-      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
-          colorText: AppColors.spaceGrey);
+
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();
@@ -75,10 +73,5 @@ class HomeController extends GetxController {
     }
     update();
     return data;
-  }
-
-  void switchChange(bool val) {
-    isSwitch = val;
-    update();
   }
 }

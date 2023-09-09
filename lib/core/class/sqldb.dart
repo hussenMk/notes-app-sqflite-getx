@@ -41,6 +41,14 @@ class SqlDb {
   )
  ''');
 
+    batch.execute('''
+  CREATE TABLE "tasks" (
+    "id" INTEGER  NOT NULL PRIMARY KEY  AUTOINCREMENT, 
+    "title" TEXT NOT NULL,
+    "isDone" TEXT DEFAULT 'false'
+  )
+ ''');
+
     await batch.commit();
     // لو لم نستخدم الباتش سنظطر لكتابة await في كل جدول جديد يتم انشاؤه وهذا غير منطقي
 

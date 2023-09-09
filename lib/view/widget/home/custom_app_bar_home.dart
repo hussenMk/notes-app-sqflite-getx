@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/controller/home_controller.dart';
-import '../../../core/constant/colors.dart';
+import 'package:notes_app_sqflite/core/constant/colors.dart';
 import '../../../core/constant/image_asset.dart';
 
 class CustomAppBarHome extends GetView<HomeController> {
@@ -17,7 +17,7 @@ class CustomAppBarHome extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -32,7 +32,8 @@ class CustomAppBarHome extends GetView<HomeController> {
                   onPressed: onPressedDrawer,
                   icon: Image.asset(
                     ImageAsset.drawer,
-                    color: Theme.of(context).colorScheme.secondary,
+                    //! color: Theme.of(context).colorScheme.secondary,
+                    color: AppColors.blue,
                   ),
                 ),
               ),
@@ -46,7 +47,8 @@ class CustomAppBarHome extends GetView<HomeController> {
                   onPressed: onPressedSearch,
                   icon: Icon(
                     Icons.search,
-                    color: Theme.of(context).colorScheme.secondary,
+                    //! color: Theme.of(context).colorScheme.secondary,
+                    color: AppColors.red,
                   ),
                 ),
               ),

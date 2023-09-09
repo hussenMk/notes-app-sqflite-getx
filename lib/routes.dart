@@ -2,6 +2,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:notes_app_sqflite/view/screen/add.dart';
 import 'package:notes_app_sqflite/view/screen/edit.dart';
 import 'package:notes_app_sqflite/view/screen/home.dart';
+import 'package:notes_app_sqflite/view/screen/tsks.dart';
 
 import 'core/constant/routes.dart';
 
@@ -18,4 +19,6 @@ List<GetPage<dynamic>>? routes = [
   // Notes
   GetPage(name: AppRoutes.addNotes, page: () => const AddNotes()),
   GetPage(name: AppRoutes.editNotes, page: () => const EditNotes()),
+
+  GetPage(name: AppRoutes.tsks, page: () => Tsks()),
 ];

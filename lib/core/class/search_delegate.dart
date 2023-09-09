@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/controller/home_controller.dart';
+import 'package:notes_app_sqflite/core/constant/colors.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
@@ -60,29 +61,42 @@ class SearchData extends SearchDelegate {
           return query.isEmpty
               ? InkWell(
                   onTap: () => controller.goToEditNotes(
-                      controller.data[index]['id'],
-                      controller.data[index]['title'],
-                      controller.data[index]['content'],
-                      controller.data[index]['dateTimeCreated']),
+                    controller.data[index]['id'],
+                    controller.data[index]['title'],
+                    controller.data[index]['content'],
+                    controller.data[index]['dateTimeCreated'],
+                  ),
                   child: Card(
                     margin: const EdgeInsets.only(top: 15, left: 8, right: 8),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                     elevation: .0,
                     child: ListTile(
-                      title: Text(
-                        "${controller.data[index]['title']}",
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      title: controller.data[index]['title'] == ""
+                          ? Text(
+                              '14'.tr,
+                              style: TextStyle(
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
+                          : Text(
+                              "${controller.data[index]['title']}",
+                              style: TextStyle(
+                                // color: Theme.of(context).colorScheme.secondary,
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "${controller.data[index]['content']}",
-                            maxLines: 10,
+                            maxLines: 6,
+                            style: const TextStyle(
+                              color: AppColors.blue,
+                            ),
                           ),
                           Text(
                             "${controller.data[index]['dateTimeCreated']}",
@@ -97,29 +111,41 @@ class SearchData extends SearchDelegate {
                 )
               : InkWell(
                   onTap: () => controller.goToEditNotes(
-                      controller.data[index]['id'],
-                      controller.data[index]['title'],
-                      controller.data[index]['content'],
-                      controller.data[index]['dateTimeCreated']),
+                    controller.data[index]['id'],
+                    controller.data[index]['title'],
+                    controller.data[index]['content'],
+                    controller.data[index]['dateTimeCreated'],
+                  ),
                   child: Card(
                     margin: const EdgeInsets.only(top: 15, left: 8, right: 8),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                     elevation: .0,
                     child: ListTile(
-                      title: Text(
-                        "${filterData[index]['title']}",
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      title: controller.data[index]['title'] == ""
+                          ? Text(
+                              '14'.tr,
+                              style: TextStyle(
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
+                          : Text(
+                              "${filterData[index]['title']}",
+                              style: TextStyle(
+                                color: AppColors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "${controller.data[index]['content']}",
-                            maxLines: 10,
+                            maxLines: 6,
+                            style: const TextStyle(
+                              color: AppColors.blue,
+                            ),
                           ),
                           Text(
                             "${controller.data[index]['dateTimeCreated']}",

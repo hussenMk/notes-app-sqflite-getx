@@ -8,31 +8,26 @@ import '../widget/home/card_notes.dart';
 import '../widget/home/custom_app_bar_home.dart';
 import '../widget/home/custom_drawer_home.dart';
 import '../widget/home/custom_welcome.dart';
+import '../widget/shared/custom_floating_action_button.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    HomeController controller = Get.put(HomeController());
+    Get.put(HomeController());
+    GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      key: controller.scaffoldKey,
+      key: scaffoldKey,
       drawer: const Drawer(
         child: CustomDrawerHome(),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Get.toNamed(AppRoutes.addNotes);
-        },
-        // backgroundColor: AppColors.blue,
-        label: Text(
-          '2'.tr,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Theme.of(context).colorScheme.primary,
-          ),
-        ),
+      floatingActionButton: CustomFloatingActionButton(
+        text: '2'.tr,
+        onPressed: () => Get.toNamed(AppRoutes.addNotes),
+        // onPressed: () => controller.sqlDb.deleteDb(),
+        widget: SizedBox(),
       ),
       body: WillPopScope(
         onWillPop: alertExitApp,
@@ -41,8 +36,7 @@ class Home extends StatelessWidget {
           child: ListView(
             children: [
               CustomAppBarHome(
-                onPressedDrawer: () =>
-                    controller.scaffoldKey.currentState?.openDrawer(),
+                onPressedDrawer: () => scaffoldKey.currentState!.openDrawer(),
                 onPressedSearch: () => showSearch(
                   context: (context),
                   delegate: SearchData(),

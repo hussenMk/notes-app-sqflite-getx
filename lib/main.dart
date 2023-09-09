@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/core/localization/translation.dart';
 import 'package:notes_app_sqflite/routes.dart';
-import 'package:notes_app_sqflite/theme/theme.dart';
+import 'package:notes_app_sqflite/core/class/theme_data.dart';
 
 import 'core/services/services.dart';
 

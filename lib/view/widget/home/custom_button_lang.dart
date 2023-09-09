@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constant/colors.dart';
-
 class CustomButtonLang extends StatelessWidget {
   final String txtButton;
   final void Function()? onPressed;

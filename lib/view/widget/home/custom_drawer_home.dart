@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app_sqflite/core/constant/functions/alert_exit_app.dart';
-import 'package:notes_app_sqflite/theme/theme.dart';
+import 'package:notes_app_sqflite/core/constant/routes.dart';
+import 'package:notes_app_sqflite/core/class/theme_data.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../../controller/home_controller.dart';
 import '../../../core/constant/colors.dart';
@@ -20,10 +21,14 @@ class CustomDrawerHome extends GetView<HomeController> {
       children: [
         UserAccountsDrawerHeader(
           decoration: BoxDecoration(
-            color: const Color(0xff424242).withOpacity(.6),
+            color: Theme.of(context).colorScheme.onPrimary,
           ),
-          currentAccountPicture: Image.asset(
-            ImageAsset.logo,
+          currentAccountPicture: CircleAvatar(
+            backgroundColor: AppColors.lightGrey,
+            child: Image.asset(
+              ImageAsset.logo,
+              height: 50,
+            ),
           ),
           accountName: const Text(
             "",
@@ -105,7 +110,18 @@ class CustomDrawerHome extends GetView<HomeController> {
                 const Divider(),
                 ListTile(
                   onTap: () {
-                    launchUrlString("http://wa.me/00967778383844");
+                    Get.toNamed(AppRoutes.tsks);
+                  },
+                  title: Text('19'.tr),
+                  leading: Image.asset(
+                    ImageAsset.listToDo,
+                    height: 30,
+                  ),
+                ),
+                const Divider(),
+                ListTile(
+                  onTap: () {
+                    launchUrlString("http://wa.me/+966543842700");
                   },
                   title: Text('8'.tr),
                   leading: Image.asset(
@@ -158,9 +174,7 @@ class CustomDrawerHome extends GetView<HomeController> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             child: ListTile(
-              onTap: () {
-                alertExitApp();
-              },
+              onTap: () => alertExitApp(),
               title: Text(
                 '10'.tr,
                 style: const TextStyle(color: AppColors.red),

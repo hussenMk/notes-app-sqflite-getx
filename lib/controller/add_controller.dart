@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app_sqflite/controller/home_controller.dart';
-import 'package:notes_app_sqflite/core/constant/colors.dart';
 import 'package:notes_app_sqflite/core/constant/routes.dart';
 import 'package:notes_app_sqflite/core/class/sqldb.dart';
 
@@ -24,17 +23,11 @@ class AddNotesController extends GetxController {
     );
 
     if (response > 0) {
-      Get.snackbar(
-        "تنبيه",
-        "تم إضافة الملاحظة بنجاح",
-        colorText: AppColors.spaceGrey,
-      );
-
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();
     } else {
-      Get.snackbar("تنبيه", "حصل خطأ");
+      Get.snackbar("تن بيه", "حصل خطأ");
     }
     update();
     print(response);

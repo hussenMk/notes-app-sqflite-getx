@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app_sqflite/core/class/sqldb.dart';
-import '../core/constant/colors.dart';
 import '../core/constant/routes.dart';
 import 'home_controller.dart';
 
@@ -27,11 +26,6 @@ class EditNotesController extends GetxController {
     );
 
     if (response > 0) {
-      Get.snackbar(
-        "تنبيه",
-        "تم تعديل الملاحظة بنجاح",
-        colorText: AppColors.spaceGrey,
-      );
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();
@@ -49,8 +43,6 @@ class EditNotesController extends GetxController {
     if (response > 0) {
       data.removeWhere((element) => element['id'] == id);
       update();
-      Get.snackbar("تنبيه", "تم حذف الملاحظة بنجاح",
-          colorText: AppColors.spaceGrey);
       Get.offNamed(AppRoutes.home);
       HomeController c = Get.put(HomeController());
       c.readData();

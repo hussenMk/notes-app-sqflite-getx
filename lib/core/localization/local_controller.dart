@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../theme/theme.dart';
+import '../class/theme_data.dart';
 import '../services/services.dart';
 
 class LocaleController extends GetxController {

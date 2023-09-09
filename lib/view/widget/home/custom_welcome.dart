@@ -13,7 +13,7 @@ class CustomWelcomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset(ImageAsset.welcome2),
+          Lottie.asset(ImageAsset.welcome),
           const SizedBox(
             height: 50,
           ),

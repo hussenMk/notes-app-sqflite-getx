@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.notes_app_sqflite">
    <application
-        android:label="notes_app_sqflite"
+        android:usesCleartextTraffic="true"
+        android:label="My Notes"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

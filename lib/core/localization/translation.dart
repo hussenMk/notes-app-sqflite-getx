@@ -21,7 +21,17 @@ class MyTranslation extends Translations {
           "15": "نعم",
           "16": "إلغاء",
           "17": "تنبيه !",
-          "18": "هل أنت متأكد من حذف الملاحظة ؟"
+          "18": "هل أنت متأكد من حذف الملاحظة ؟",
+          "19": "قائمة المهام",
+          "20": "إضافة مهمة جديدة",
+          "21": "إضافة مهمة",
+          "22": "تسجيل الدخول",
+          "23": "إنشاء حساب",
+          "24": "تسجيل الدخول من خلال قوقل",
+          "25": "ادخل البريد الإلكتروني",
+          "26": "ادخل كلمة المرور",
+          "27": "نسيت كلمة المرور ؟",
+          "28": "ادخل اسم المستخدم",
         },
         "en": {
           "1": "You don't have any Notes !",
@@ -31,7 +41,7 @@ class MyTranslation extends Translations {
           "5": "ابدأ في الكتابة",
           "6": "Dark Mode",
           "7": "Change Language",
-          "8": "mmmm",
+          "8": "Help",
           "9": "About",
           "10": "Exit For App",
           "11": "Arabic",
@@ -41,7 +51,17 @@ class MyTranslation extends Translations {
           "15": "Ok",
           "16": "Cancel",
           "17": "Alert !",
-          "18": "Are you sure you want to delete the note ?"
+          "18": "Are you sure you want to delete the note ?",
+          "19": "To Do List",
+          "20": "Add a new task",
+          "21": "Add Task",
+          "22": "Login",
+          "23": "SignUp",
+          "24": "Login With Google",
+          "25": "Enter your email",
+          "26": "Enter your password",
+          "27": "Forgot password ?",
+          "28": "Enter your username",
         }
       };
 }
