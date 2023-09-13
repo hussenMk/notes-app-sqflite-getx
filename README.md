@@ -32,7 +32,7 @@ Notes app is open-source for Android & ios. It is build with Dart Language and G
 
 | Add Notes | Edit Notes| Delete Dialog |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/9b921fa6-6f98-488a-a391-6a5ad87ad9da" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/4bc6a7ef-7c3d-451d-8687-9e86a9b24ca0" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/d4c10722-dd88-4f0d-87f7-85b2705ed305" width="400">|
+|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/8456ab27-7bc5-4c0f-b125-d1d1627bedd0" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/4bc6a7ef-7c3d-451d-8687-9e86a9b24ca0" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/d4c10722-dd88-4f0d-87f7-85b2705ed305" width="400">|
 
 
 
@@ -48,11 +48,12 @@ The following packages are needed for the development of this application.
 - `sqflite: ^2.2.8+4`  
 - `get: ^4.6.5`
 - `shared_preferences: ^2.0.15`
-- `http: ^0.13.5`
-- `flutter_spinkit: ^5.1.0`
-- `lottie: ^2.2.0`
-- `either_dart: ^0.3.0`
-- `url_launcher: ^6.1.11`
-- `staggered_grid_view_flutter: ^0.0.4`
-- `intl: ^0.18.1`
+- `lottie`
+- `either_dart`
+- `url_launcher`
+- `staggered_grid_view_flutter`
+- `intl`
+- `flutter_slidable`
+- `share_plus`
+
 
