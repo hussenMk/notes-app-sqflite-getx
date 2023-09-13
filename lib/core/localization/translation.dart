@@ -38,7 +38,7 @@ class MyTranslation extends Translations {
           "2": "Add Note",
           "3": "Save",
           "4": "Title",
-          "5": "ابدأ في الكتابة",
+          "5": "Start writing",
           "6": "Dark Mode",
           "7": "Change Language",
           "8": "Help",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notes_app_sqflite/core/constant/colors.dart';
+
 import 'package:notes_app_sqflite/core/constant/functions/custom_alert_dialog_delete.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -31,7 +31,7 @@ class CustomCardNotes extends GetView<HomeController> {
               customAlertDialogDelete(
                 () {
                   Get.back();
-                  controller.deleteData(index);
+                  controller.deleteData(controller.data[index]['id']);
                 },
                 () {},
               );

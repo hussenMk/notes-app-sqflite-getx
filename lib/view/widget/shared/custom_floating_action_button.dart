@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app_sqflite/core/constant/colors.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   final void Function()? onPressed;
