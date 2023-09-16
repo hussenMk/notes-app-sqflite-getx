@@ -32,7 +32,7 @@ Notes app is open-source for Android & ios. It is build with Dart Language and G
 
 | Add Notes | Edit Notes| Delete Dialog |
 |------|-------|-------|
-|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/8456ab27-7bc5-4c0f-b125-d1d1627bedd0" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/f57d03cf-4cff-4052-9afc-2612d9e7388" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/d4c10722-dd88-4f0d-87f7-85b2705ed305" width="400">|
+|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/8456ab27-7bc5-4c0f-b125-d1d1627bedd0" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/f57d03cf-4cff-4052-9afc-2612d9e73882" width="400">|<img src="https://github.com/hussenMk/notes-app-sqflite-getx/assets/82022968/d4c10722-dd88-4f0d-87f7-85b2705ed305" width="400">|
 
 
 
