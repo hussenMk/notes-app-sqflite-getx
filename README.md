@@ -25,7 +25,6 @@ Notes app is open-source for Android & ios. It is build with Dart Language and G
 
 
 ## Snapshots
-### Light Mode
 | Welcom Screen | Home Screen | Drawer |
 |------|-------|-------|
 |<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/5a949150-325a-47c9-af76-94e38b3c9358" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/23db9e4d-c978-4ca8-97c6-bd88d2049108" width="400">|<img src="https://github.com/hussenMk/notes_app_sqflite/assets/82022968/1b2d963d-68c0-40d8-93d8-1dde587fc021" width="400">|
